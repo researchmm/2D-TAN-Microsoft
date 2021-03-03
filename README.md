@@ -10,18 +10,22 @@ Our model is  simple  in  design  and  achieves  competitive  performance in  co
 [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
 
 ## News
-We extend our 2D-TAN approach to the temporal action localization task and win the **1st** place in [HACS Temporal Action Localization Challenge](http://hacs.csail.mit.edu/challenge.html) at [ICCV 2019](iccv2019.thecvf.com). For more details please refer to our [technical report](https://arxiv.org/abs/1912.03612).
+- :sunny: Our paper was accepted by AAAI-2020. [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
+- :trophy: We extend our 2D-TAN approach to the temporal action localization task and win the **1st** place in [HACS Temporal Action Localization Challenge](http://hacs.csail.mit.edu/challenge.html) at [ICCV 2019](iccv2019.thecvf.com). For more details please refer to our [technical report](https://arxiv.org/abs/1912.03612).
 
 ## Framework
 ![alt text](imgs/pipeline.jpg)
 
 ## Main Results
 
-#### Main results on Charades-STA 
+#### Main results on Charades-STA
 | Method | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
 | ---- |:-------------:| :-----:|:-----:|:-----:|
-| Pool | 39.70 | 23.31 | 80.32 | 51.26 |
-| Conv | 39.81 | 23.25 | 79.33 | 52.15 |
+| Pool | 40.94 | 22.85 | 83.84 | 50.35 |
+| Conv | 42.80 | 23.25 | 80.54 | 54.14 |
+
+I fixed a bug for loading charades visual features, the updated performance is listed above.
+Please use these results when comparing with our AAAI paper. 
 
 #### Main results on ActivityNet Captions 
 | Method | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 | Rank5@0.5 | Rank5@0.7 |
@@ -45,7 +49,8 @@ We extend our 2D-TAN approach to the temporal action localization task and win t
 
 ## Quick Start
 
-Please download the visual features from [onedrive](https://uofr-my.sharepoint.com/:f:/g/personal/szhang83_ur_rochester_edu/Et2UAFYHntBFtOydywVgoYIBFacOq13qjKHF6rZvQ2bldg?e=QFvqbG) and save it to the `data/` folder. 
+Please download the visual features from [google drive](https://drive.google.com/drive/folders/1D3nav3TKZmYNHvSLBgDt1vpBUXoV2MRv?usp=sharing) and save it to the `data/` folder. 
+
 
 #### Training
 Use the following commands for training:
@@ -67,7 +72,8 @@ python moment_localization/train.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-
 ```
 
 #### Testing
-Our trained model are provided in [onedrive](https://uofr-my.sharepoint.com/:f:/g/personal/szhang83_ur_rochester_edu/Emi09jdg3E9Iuj3UqiyYnjEBR0VNIsgaae9PiJUlzmKeuQ?e=FOQQbC). Please download them to the `checkpoints` folder.
+Our trained model are provided in [google drive](https://drive.google.com/drive/folders/1RJGhOsTrGELgs9PJZoIUU9l95mXI6TON?usp=sharing). Please download them to the `checkpoints` folder.
+
 Then, run the following commands for evaluation: 
 ```
 # Evaluate "Pool" in Table 1
